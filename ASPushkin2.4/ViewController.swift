@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func logInPressed() {
+    }
+    
+    @IBAction func forgoData() {
+    }
 }
 
