@@ -17,8 +17,10 @@ class LogInViewController: UIViewController {
     
 //MARK: - override func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.user = user
+        
+//        guard let tabBar = segue.destination as? UITabBarController else { return }
     }
     
 //MARK: - IBAction

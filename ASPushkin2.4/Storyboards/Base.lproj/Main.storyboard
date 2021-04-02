@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="30" y="70"/>
         </scene>
-        <!--About Me-->
+        <!--Welcome View Controller-->
         <scene sceneID="OZ0-GF-5nh">
             <objects>
                 <viewController id="nsw-QK-2mH" customClass="WelcomeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                             <constraint firstItem="Qq4-Sj-goI" firstAttribute="centerX" secondItem="ygI-J4-poq" secondAttribute="centerX" id="osq-GP-oCa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About Me" image="person.crop.square.fill" catalog="system" id="KAv-wm-AU9"/>
+                    <tabBarItem key="tabBarItem" title="" image="airport.express" catalog="system" id="KAv-wm-AU9"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="HQo-MB-rye" id="qbc-B7-Ssl"/>
                     </connections>
@@ -137,17 +137,17 @@
             </objects>
             <point key="canvasLocation" x="1783" y="70"/>
         </scene>
-        <!--Item-->
+        <!--About Me View Controller-->
         <scene sceneID="E5L-5m-QkZ">
             <objects>
-                <viewController id="nPS-dx-tb1" sceneMemberID="viewController">
+                <viewController id="nPS-dx-tb1" customClass="AboutMeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eB8-Rl-U8r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fva-80-woT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Cjs-Vu-2oH"/>
+                    <tabBarItem key="tabBarItem" title="" image="info.circle.fill" catalog="system" id="Cjs-Vu-2oH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sri-5v-Jsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +174,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="airport.express" catalog="system" width="115" height="128"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
