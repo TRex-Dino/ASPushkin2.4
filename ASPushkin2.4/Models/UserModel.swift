@@ -8,12 +8,14 @@
 struct User {
     let userName: String
     let password: String
+    let whatIlike: [String]
     let userInfo: Person
     
     static func getInfoAboutUser() -> User {
         User(
             userName: "User",
             password: "Password",
+            whatIlike: ["Write", "Read", "Duels"],
             userInfo: Person(
             name: "Alexander",
             surname: "Pushkin",

@@ -15,6 +15,7 @@
 		0A0763DA261705300026F7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A0763D8261705300026F7EE /* LaunchScreen.storyboard */; };
 		0A0763E426170CF10026F7EE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0763E326170CF10026F7EE /* WelcomeViewController.swift */; };
 		0A0F35612617BDA8003DE207 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F35602617BDA8003DE207 /* UserModel.swift */; };
+		0A0FAB1226190B5700FE2176 /* WhatILikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FAB1126190B5700FE2176 /* WhatILikeViewController.swift */; };
 		0A44016826176C8200B2C407 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A44016726176C8200B2C407 /* AboutMeViewController.swift */; };
 		0A4AA8472618511300C28530 /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4AA8462618511300C28530 /* PoemViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		0A0763DB261705300026F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A0763E326170CF10026F7EE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0A0F35602617BDA8003DE207 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0A0FAB1126190B5700FE2176 /* WhatILikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatILikeViewController.swift; sourceTree = "<group>"; };
 		0A44016726176C8200B2C407 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		0A4AA8462618511300C28530 /* PoemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				0A44016726176C8200B2C407 /* AboutMeViewController.swift */,
 				0A0763E326170CF10026F7EE /* WelcomeViewController.swift */,
 				0A4AA8462618511300C28530 /* PoemViewController.swift */,
+				0A0FAB1126190B5700FE2176 /* WhatILikeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0763D22617052E0026F7EE /* LogInViewController.swift in Sources */,
+				0A0FAB1226190B5700FE2176 /* WhatILikeViewController.swift in Sources */,
 				0A44016826176C8200B2C407 /* AboutMeViewController.swift in Sources */,
 				0A0763E426170CF10026F7EE /* WelcomeViewController.swift in Sources */,
 				0A0763CE2617052E0026F7EE /* AppDelegate.swift in Sources */,

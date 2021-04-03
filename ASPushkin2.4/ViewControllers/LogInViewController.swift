@@ -32,6 +32,11 @@ class LogInViewController: UIViewController {
             } else
             if let poemVC = viewController as? PoemViewController {
                 poemVC.poem = user.userInfo.poem
+            } else
+            if let navigationVC = viewController as? UINavigationController {
+                if let whatILikeVC = navigationVC.topViewController as? WhatILikeViewController {
+                    whatILikeVC.likes = user.whatIlike
+                }
             }
             
         }

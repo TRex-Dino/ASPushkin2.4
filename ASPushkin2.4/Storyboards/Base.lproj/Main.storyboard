@@ -182,6 +182,7 @@
                         <segue destination="3fG-rP-H1D" kind="relationship" relationship="viewControllers" id="t3s-Pn-iSL"/>
                         <segue destination="qW3-1V-ea7" kind="relationship" relationship="viewControllers" id="qv8-PF-hq7"/>
                         <segue destination="6BF-SB-ttv" kind="relationship" relationship="viewControllers" id="esb-Cq-7lX"/>
+                        <segue destination="59A-nh-xl2" kind="relationship" relationship="viewControllers" id="7vI-VV-OIp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnK-wO-cX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -316,10 +317,104 @@
             </objects>
             <point key="canvasLocation" x="1716" y="-120"/>
         </scene>
+        <!--WhatI Like View Controller-->
+        <scene sceneID="kIY-Rl-olH">
+            <objects>
+                <viewController id="vzZ-3P-FTu" customClass="WhatILikeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHd-DO-sFT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kl-lj-rG6">
+                                <rect key="frame" x="139" y="273.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YTs-St-UpZ"/>
+                        <color key="backgroundColor" red="0.78060251469999997" green="0.78002130989999996" blue="0.80000334979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5Kl-lj-rG6" firstAttribute="centerY" secondItem="dHd-DO-sFT" secondAttribute="centerY" id="bPc-I5-KNM"/>
+                            <constraint firstItem="5Kl-lj-rG6" firstAttribute="centerX" secondItem="dHd-DO-sFT" secondAttribute="centerX" id="bzD-lM-ab3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rGj-7a-H0m">
+                        <barButtonItem key="rightBarButtonItem" title="I Don't like" id="QxK-Tp-FoN">
+                            <connections>
+                                <segue destination="daN-Zo-teU" kind="show" id="NMG-VL-3ci"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="likeLabel" destination="5Kl-lj-rG6" id="NXN-BZ-ot4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uk1-aP-pFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3446.25" y="-120.4225352112676"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ayp-iT-bGh">
+            <objects>
+                <viewController id="daN-Zo-teU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="13r-6v-KGp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dantes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-Us-63f">
+                                <rect key="frame" x="16" y="60" width="288" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="alexShoot" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-ud-7AV">
+                                <rect key="frame" x="0.0" y="117.5" width="320" height="401.5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f43-Or-B14"/>
+                        <color key="backgroundColor" red="0.58823943140000001" green="0.58822804689999997" blue="0.58823579550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="BMh-ud-7AV" firstAttribute="top" secondItem="sdu-Us-63f" secondAttribute="bottom" id="4IS-AA-YXu"/>
+                            <constraint firstItem="f43-Or-B14" firstAttribute="bottom" secondItem="BMh-ud-7AV" secondAttribute="bottom" id="JuN-dM-Gby"/>
+                            <constraint firstItem="f43-Or-B14" firstAttribute="trailing" secondItem="sdu-Us-63f" secondAttribute="trailing" constant="16" id="Ze7-70-J1l"/>
+                            <constraint firstItem="sdu-Us-63f" firstAttribute="leading" secondItem="f43-Or-B14" secondAttribute="leading" constant="16" id="gED-jv-UdC"/>
+                            <constraint firstItem="f43-Or-B14" firstAttribute="trailing" secondItem="BMh-ud-7AV" secondAttribute="trailing" id="jgB-TW-hs9"/>
+                            <constraint firstItem="BMh-ud-7AV" firstAttribute="leading" secondItem="f43-Or-B14" secondAttribute="leading" id="rgd-OA-cYi"/>
+                            <constraint firstItem="sdu-Us-63f" firstAttribute="top" secondItem="f43-Or-B14" secondAttribute="top" constant="16" id="zhU-mi-fKG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HcV-55-dFQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQE-IO-Eof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4142" y="-120"/>
+        </scene>
+        <!--like-->
+        <scene sceneID="Iag-oI-t98">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="59A-nh-xl2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="like" image="heart" catalog="system" id="Ia4-4b-d49"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bq0-aS-F6i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vzZ-3P-FTu" kind="relationship" relationship="rootViewController" id="LhD-rC-Tdi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymN-Ci-g1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448.75" y="-120.4225352112676"/>
+        </scene>
     </scenes>
     <resources>
         <image name="alex" width="1302" height="1600"/>
+        <image name="alexShoot" width="497" height="332"/>
         <image name="book" catalog="system" width="128" height="102"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
         <systemColor name="systemGray3Color">
