@@ -9,14 +9,12 @@ import UIKit
 
 class PoemViewController: UIViewController {
 
-    @IBOutlet var poemTV: UITextView!
+    @IBOutlet var poemLabel: UILabel!
     var poem = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        poemTV.text = poem
-        poemTV.backgroundColor = self.view.backgroundColor
-        poemTV.adjustsFontForContentSizeCategory = true
+        poemLabel.text = poem
 
     }
    

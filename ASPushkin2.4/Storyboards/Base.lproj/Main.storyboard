@@ -140,28 +140,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="123" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-v8-ax9">
-                                <rect key="frame" x="16" y="115" width="288" height="250"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qFA-m2-XBe">
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="4VG-bm-1sE"/>
+                                    <constraint firstAttribute="width" secondItem="qFA-m2-XBe" secondAttribute="height" multiplier="1:1" id="IxF-Jx-c3f"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="mWM-qi-oSs"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FP0-Mf-xqk"/>
                         <color key="backgroundColor" red="0.38039490580000002" green="0.38038718700000002" blue="0.38039243220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="W6o-v8-ax9" firstAttribute="top" secondItem="FP0-Mf-xqk" secondAttribute="top" constant="115" id="4F4-Yk-Yau"/>
-                            <constraint firstItem="W6o-v8-ax9" firstAttribute="leading" secondItem="FP0-Mf-xqk" secondAttribute="leading" constant="16" id="ZBx-xO-mdQ"/>
-                            <constraint firstItem="FP0-Mf-xqk" firstAttribute="trailing" secondItem="W6o-v8-ax9" secondAttribute="trailing" constant="16" id="mac-uG-Y3B"/>
+                            <constraint firstItem="qFA-m2-XBe" firstAttribute="centerY" secondItem="DfC-9j-rO7" secondAttribute="centerY" id="cqw-5d-YbF"/>
+                            <constraint firstItem="qFA-m2-XBe" firstAttribute="centerX" secondItem="DfC-9j-rO7" secondAttribute="centerX" id="hzN-Dt-CFh"/>
+                            <constraint firstItem="qFA-m2-XBe" firstAttribute="width" secondItem="DfC-9j-rO7" secondAttribute="height" multiplier="125:284" id="xwA-S2-6do"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Poem" image="book" catalog="system" id="aVv-k4-UtN"/>
                     <connections>
-                        <outlet property="poemTV" destination="W6o-v8-ax9" id="HFR-3e-yKS"/>
+                        <outlet property="poemLabel" destination="qFA-m2-XBe" id="doK-OW-MLs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aav-ln-hda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,6 +174,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Ki6-Jv-BBv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fpy-XE-bQE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -321,9 +322,6 @@
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
