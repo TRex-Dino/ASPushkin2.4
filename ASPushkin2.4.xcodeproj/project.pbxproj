@@ -16,6 +16,7 @@
 		0A0763E426170CF10026F7EE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0763E326170CF10026F7EE /* WelcomeViewController.swift */; };
 		0A0F35612617BDA8003DE207 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F35602617BDA8003DE207 /* UserModel.swift */; };
 		0A44016826176C8200B2C407 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A44016726176C8200B2C407 /* AboutMeViewController.swift */; };
+		0A4AA8472618511300C28530 /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4AA8462618511300C28530 /* PoemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0A0763E326170CF10026F7EE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0A0F35602617BDA8003DE207 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0A44016726176C8200B2C407 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		0A4AA8462618511300C28530 /* PoemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				0A0763D12617052E0026F7EE /* LogInViewController.swift */,
 				0A44016726176C8200B2C407 /* AboutMeViewController.swift */,
 				0A0763E326170CF10026F7EE /* WelcomeViewController.swift */,
+				0A4AA8462618511300C28530 /* PoemViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				0A0763E426170CF10026F7EE /* WelcomeViewController.swift in Sources */,
 				0A0763CE2617052E0026F7EE /* AppDelegate.swift in Sources */,
 				0A0F35612617BDA8003DE207 /* UserModel.swift in Sources */,
+				0A4AA8472618511300C28530 /* PoemViewController.swift in Sources */,
 				0A0763D02617052E0026F7EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

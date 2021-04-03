@@ -46,7 +46,7 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="6EV-To-S0R"/>
-                                            <segue destination="yGd-0W-Gd1" kind="presentation" identifier="WelcomeSegue" id="J3a-7g-cRa"/>
+                                            <segue destination="Ki6-Jv-BBv" kind="presentation" identifier="WelcomeSegue" id="a9M-6x-O5X"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="dE7-yf-73y" userLabel="Button Stacks">
@@ -88,94 +88,239 @@
             </objects>
             <point key="canvasLocation" x="30" y="70"/>
         </scene>
-        <!--Welcome View Controller-->
-        <scene sceneID="OZ0-GF-5nh">
+        <!--Welcome-->
+        <scene sceneID="KqL-JY-Bii">
             <objects>
-                <viewController id="nsw-QK-2mH" customClass="WelcomeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ygI-J4-poq">
+                <viewController modalPresentationStyle="fullScreen" id="3fG-rP-H1D" customClass="WelcomeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H7p-2b-T3R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq4-Sj-goI">
-                                <rect key="frame" x="127.5" y="370" width="65" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="0N7-4E-2Ly"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <segue destination="ohL-f4-E4S" kind="unwind" unwindAction="unwindSegueWithSegue:" id="bVp-KW-pqF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQo-MB-rye">
-                                <rect key="frame" x="82" y="70" width="156" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="3xv-4j-eDS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONs-j4-MD9">
+                                <rect key="frame" x="132" y="95" width="56" height="32"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PH-ke-waG">
+                                <rect key="frame" x="113.5" y="334" width="93" height="70"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wu6-IG-mMc" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Qhe-Za-giJ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="PRW-7x-3yJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Tyy-Dx-V5p"/>
+                        <color key="backgroundColor" red="0.38039490580000002" green="0.38038718700000002" blue="0.38039243220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="HQo-MB-rye" firstAttribute="leading" secondItem="PRW-7x-3yJ" secondAttribute="leading" constant="82" id="8QI-EJ-efa"/>
-                            <constraint firstItem="Qq4-Sj-goI" firstAttribute="top" secondItem="HQo-MB-rye" secondAttribute="bottom" constant="150" id="Cn8-gL-Qyk"/>
-                            <constraint firstItem="PRW-7x-3yJ" firstAttribute="trailing" secondItem="HQo-MB-rye" secondAttribute="trailing" constant="82" id="HJO-DS-cgb"/>
-                            <constraint firstItem="HQo-MB-rye" firstAttribute="top" secondItem="PRW-7x-3yJ" secondAttribute="top" constant="70" id="QLv-h8-74P"/>
-                            <constraint firstItem="Qq4-Sj-goI" firstAttribute="centerX" secondItem="ygI-J4-poq" secondAttribute="centerX" id="osq-GP-oCa"/>
+                            <constraint firstItem="9PH-ke-waG" firstAttribute="centerX" secondItem="H7p-2b-T3R" secondAttribute="centerX" id="5sQ-JE-cge"/>
+                            <constraint firstItem="ONs-j4-MD9" firstAttribute="centerX" secondItem="H7p-2b-T3R" secondAttribute="centerX" id="N7R-kA-QAG"/>
+                            <constraint firstItem="ONs-j4-MD9" firstAttribute="top" secondItem="Tyy-Dx-V5p" secondAttribute="top" constant="95" id="vYj-km-YwO"/>
+                            <constraint firstItem="Tyy-Dx-V5p" firstAttribute="bottom" secondItem="9PH-ke-waG" secondAttribute="bottom" constant="115" id="ysd-qL-1f1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="airport.express" catalog="system" id="KAv-wm-AU9"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="sunrise" catalog="system" id="lxC-No-yce"/>
                     <connections>
-                        <outlet property="welcomeLabel" destination="HQo-MB-rye" id="qbc-B7-Ssl"/>
+                        <outlet property="welcomeLabel" destination="ONs-j4-MD9" id="YW8-aI-QyO"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="peH-Tt-miO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="ohL-f4-E4S" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSc-9w-6rT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Wu6-IG-mMc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="70"/>
+            <point key="canvasLocation" x="1716" y="550"/>
         </scene>
-        <!--About Me View Controller-->
-        <scene sceneID="E5L-5m-QkZ">
+        <!--Poem-->
+        <scene sceneID="TaR-rn-3bC">
             <objects>
-                <viewController id="nPS-dx-tb1" customClass="AboutMeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eB8-Rl-U8r">
+                <viewController id="6BF-SB-ttv" customClass="PoemViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DfC-9j-rO7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fva-80-woT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="123" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-v8-ax9">
+                                <rect key="frame" x="16" y="115" width="288" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="4VG-bm-1sE"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FP0-Mf-xqk"/>
+                        <color key="backgroundColor" red="0.38039490580000002" green="0.38038718700000002" blue="0.38039243220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="W6o-v8-ax9" firstAttribute="top" secondItem="FP0-Mf-xqk" secondAttribute="top" constant="115" id="4F4-Yk-Yau"/>
+                            <constraint firstItem="W6o-v8-ax9" firstAttribute="leading" secondItem="FP0-Mf-xqk" secondAttribute="leading" constant="16" id="ZBx-xO-mdQ"/>
+                            <constraint firstItem="FP0-Mf-xqk" firstAttribute="trailing" secondItem="W6o-v8-ax9" secondAttribute="trailing" constant="16" id="mac-uG-Y3B"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="info.circle.fill" catalog="system" id="Cjs-Vu-2oH"/>
+                    <tabBarItem key="tabBarItem" title="Poem" image="book" catalog="system" id="aVv-k4-UtN"/>
+                    <connections>
+                        <outlet property="poemTV" destination="W6o-v8-ax9" id="HFR-3e-yKS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sri-5v-Jsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aav-ln-hda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781" y="839"/>
+            <point key="canvasLocation" x="2494" y="549"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="VnE-Nq-4r5">
+        <scene sceneID="BRm-un-NcY">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="yGd-0W-Gd1" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Ki6-Jv-BBv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UBg-qL-82P">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fpy-XE-bQE">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nsw-QK-2mH" kind="relationship" relationship="viewControllers" id="gFH-Up-PtM"/>
-                        <segue destination="nPS-dx-tb1" kind="relationship" relationship="viewControllers" id="OMt-HU-XFt"/>
+                        <segue destination="3fG-rP-H1D" kind="relationship" relationship="viewControllers" id="t3s-Pn-iSL"/>
+                        <segue destination="qW3-1V-ea7" kind="relationship" relationship="viewControllers" id="qv8-PF-hq7"/>
+                        <segue destination="6BF-SB-ttv" kind="relationship" relationship="viewControllers" id="esb-Cq-7lX"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n3e-Pp-SvD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BnK-wO-cX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746.25" y="69.718309859154928"/>
+            <point key="canvasLocation" x="862.5" y="75"/>
+        </scene>
+        <!--About Me-->
+        <scene sceneID="ML3-L1-ssi">
+            <objects>
+                <viewController id="qW3-1V-ea7" customClass="AboutMeViewController" customModule="ASPushkin2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Db7-Mh-8Tw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GBZ-4Z-f7h">
+                                <rect key="frame" x="16" y="35" width="288" height="171.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ny4-NJ-vRX">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuI-ZD-AqM">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhN-cI-A2c">
+                                                <rect key="frame" x="255.5" y="0.0" width="32.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="29K-Ry-tPa">
+                                        <rect key="frame" x="0.0" y="37.5" width="288" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaa-o1-KjT">
+                                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkm-FD-KMh">
+                                                <rect key="frame" x="237" y="0.0" width="51" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="85v-ge-6Mc">
+                                        <rect key="frame" x="0.0" y="75" width="288" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1L-cI-eeD">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-XH-age">
+                                                <rect key="frame" x="267" y="0.0" width="21" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="wuS-5D-Ylw">
+                                        <rect key="frame" x="0.0" y="112.5" width="288" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityBorn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgx-zg-RsR">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cityBorn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzJ-dV-rwu">
+                                                <rect key="frame" x="230" y="0.0" width="58" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="kJS-f9-MvF">
+                                        <rect key="frame" x="0.0" y="150" width="288" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobby:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t1-ND-bGz">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hobby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZh-bM-Kjk">
+                                                <rect key="frame" x="250" y="0.0" width="38" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alex" translatesAutoresizingMaskIntoConstraints="NO" id="ZKA-i8-APr">
+                                <rect key="frame" x="16" y="222.5" width="288" height="280.5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sze-fI-mZW"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sze-fI-mZW" firstAttribute="trailing" secondItem="GBZ-4Z-f7h" secondAttribute="trailing" constant="16" id="7ES-qz-04a"/>
+                            <constraint firstItem="ZKA-i8-APr" firstAttribute="top" secondItem="GBZ-4Z-f7h" secondAttribute="bottom" constant="16" id="EuX-jZ-FOQ"/>
+                            <constraint firstItem="GBZ-4Z-f7h" firstAttribute="top" secondItem="Sze-fI-mZW" secondAttribute="top" constant="35" id="LEC-md-t8c"/>
+                            <constraint firstItem="ZKA-i8-APr" firstAttribute="leading" secondItem="Sze-fI-mZW" secondAttribute="leading" constant="16" id="nmk-An-nI4"/>
+                            <constraint firstItem="GBZ-4Z-f7h" firstAttribute="leading" secondItem="Sze-fI-mZW" secondAttribute="leading" constant="16" id="q8l-GV-ajb"/>
+                            <constraint firstItem="Sze-fI-mZW" firstAttribute="bottom" secondItem="ZKA-i8-APr" secondAttribute="bottom" constant="16" id="qud-PK-wdH"/>
+                            <constraint firstItem="Sze-fI-mZW" firstAttribute="trailing" secondItem="ZKA-i8-APr" secondAttribute="trailing" constant="16" id="swe-nL-rIL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About Me" image="info.circle" catalog="system" id="7yc-bd-OV7"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="2kh-XH-age" id="Wcg-gk-Wif"/>
+                        <outlet property="cityBornLabel" destination="AzJ-dV-rwu" id="p1v-EN-ltn"/>
+                        <outlet property="hobbyLabel" destination="GZh-bM-Kjk" id="paa-43-mpH"/>
+                        <outlet property="nameLabel" destination="HhN-cI-A2c" id="qJ9-Kz-ne3"/>
+                        <outlet property="photoImageView" destination="ZKA-i8-APr" id="wVj-1M-7S2"/>
+                        <outlet property="surnameLabel" destination="Kkm-FD-KMh" id="zeG-Ah-mDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLW-l3-h0k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-120"/>
         </scene>
     </scenes>
     <resources>
-        <image name="airport.express" catalog="system" width="115" height="128"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="alex" width="1302" height="1600"/>
+        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="sunrise" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

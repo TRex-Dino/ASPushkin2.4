@@ -12,20 +12,34 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "1"
-    private let password = "1"
+    
+    private let user = User.getInfoAboutUser()
     
 //MARK: - override func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController
+        else { return }
+        guard let tabBarControllers = tabBarController.viewControllers
+        else { return }
         
-//        guard let tabBar = segue.destination as? UITabBarController else { return }
+        for viewController in tabBarControllers {
+            
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.greet = user.userInfo.name
+            } else
+            if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.user = user
+            } else
+            if let poemVC = viewController as? PoemViewController {
+                poemVC.poem = user.userInfo.poem
+            }
+            
+        }
     }
     
 //MARK: - IBAction
     @IBAction func logInPressed() {
-        if userNameTF.text != user || passwordTF.text != password {
+        if userNameTF.text != user.userName || passwordTF.text != user.password {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password")
             passwordTF.text = ""
@@ -36,12 +50,13 @@ class LogInViewController: UIViewController {
     
     @IBAction func forgotData(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Your name is", message: user)
-            : showAlert(title: "Your pass is", message: password)
+            ? showAlert(title: "Your name is", message: user.userName)
+            : showAlert(title: "Your pass is", message: user.password)
     }
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
+        
     }
     
 }
@@ -78,3 +93,5 @@ extension LogInViewController: UITextFieldDelegate {
         return true
     }
 }
+
+
