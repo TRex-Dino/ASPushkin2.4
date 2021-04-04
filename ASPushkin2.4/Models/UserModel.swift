@@ -17,13 +17,13 @@ struct User {
             password: "Password",
             whatIlike: ["Write", "Read", "Duels"],
             userInfo: Person(
-            name: "Alexander",
-            surname: "Pushkin",
-            age: 37,
-            cityBorn: "Moscow",
-            hobby: "Writing books",
-            avatar: "alex",
-            poem: """
+                name: "Alexander",
+                surname: "Pushkin",
+                age: 37,
+                cityBorn: "Moscow",
+                hobby: "Writing books",
+                avatar: "alex",
+                poem: """
                 By gates of Eden, Angel, gentle,
                 Shone with his softly drooped head,
                 And Demon, gloomy and resentful

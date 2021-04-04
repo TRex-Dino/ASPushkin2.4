@@ -26,14 +26,11 @@ class LogInViewController: UIViewController {
             
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.greet = user.userInfo.name
-            } else
-            if let aboutMeVC = viewController as? AboutMeViewController {
+            } else if let aboutMeVC = viewController as? AboutMeViewController {
                 aboutMeVC.user = user
-            } else
-            if let poemVC = viewController as? PoemViewController {
+            } else if let poemVC = viewController as? PoemViewController {
                 poemVC.poem = user.userInfo.poem
-            } else
-            if let navigationVC = viewController as? UINavigationController {
+            } else if let navigationVC = viewController as? UINavigationController {
                 if let whatILikeVC = navigationVC.topViewController as? WhatILikeViewController {
                     whatILikeVC.likes = user.whatIlike
                 }
